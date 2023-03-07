@@ -15,3 +15,11 @@
       - ifupdown2
     - require:
       - pkgrepo: {{ tpldot }}.repo
+
+net.ipv6.conf.all.autoconf:
+  sysctl.present:
+    - value: 0
+
+net.ipv6.conf.default.autoconf:
+  sysctl.present:
+    - value: 0
